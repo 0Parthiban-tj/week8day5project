@@ -1,0 +1,39 @@
+div .autogadgets{
+    display: grid;
+    height: 100%;
+}
+.header{
+width: 100%;
+
+}
+
+.name a{
+    text-decoration: none;
+    color: turquoise;
+}
+.name a:hover{
+color: white;
+}
+
+.search mat-form-field{
+    padding-bottom: 5px;
+    width: 300px;
+}
+
+.category{
+    background-color: black;
+}
+.header div{
+flex: 1 1 auto;
+}
+
+.mat-tab-body-content {
+    height: 100%;
+    overflow: hidden !important;
+}
+
+
+  
+.example-spacer {
+    flex: 1 1 auto;
+  }

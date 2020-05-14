@@ -1,0 +1,33 @@
+<div class="category">
+        <div class="content">
+          <div *ngFor="let product of products " >
+            <div *ngIf="product.category=='exhaust'">
+          <a href="#"><mat-card class="card" matRipple [matRippleCentered]>
+              <mat-card-header>
+                <mat-card-title>{{product.name}}</mat-card-title>
+                <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="{{product.images}}" alt="Photo {{product.name}}">
+              <mat-card-content>
+                <p>
+                  {{product.description}}
+                </p>
+                <p>₹{{product.itemcost}}/-</p>
+              </mat-card-content>
+             
+            </mat-card>
+          </a>
+          <mat-card-actions>
+          
+            <button mat-button>BUY NOW</button>
+            <button mat-button>ADD TO CART</button>
+          
+          </mat-card-actions>
+          </div>
+        </div>
+          </div>
+          <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+</div>

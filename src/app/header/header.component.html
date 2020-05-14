@@ -1,0 +1,91 @@
+<div class="autogadgets">
+<mat-drawer-container >
+    <mat-drawer #drawer mode="push">
+            <mat-nav-list>
+                <a mat-list-item><mat-icon>account_box</mat-icon> Account Settings</a>
+                <a mat-list-item><mat-icon>add_shopping_cart</mat-icon>Your Cart</a>
+                <a mat-list-item><mat-icon>remove_shopping_cart</mat-icon>Return And Policy</a>
+                <a mat-list-item><mat-icon>card_giftcard</mat-icon>Coupons Codes</a>
+                <a mat-list-item><mat-icon>supervisor_account</mat-icon>Customer support</a>
+                <a mat-list-item>	<mat-icon>build</mat-icon>Settings</a>
+                <a mat-list-item><mat-icon>account_circle</mat-icon>Contact us</a>
+                <a mat-list-item><mat-icon>power_settings_new</mat-icon>Sign-out</a>
+
+            </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+    <mat-toolbar class="header">
+        
+    <div class="menu">
+        <button mat-icon-button color="accent" (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>                
+          </button>
+        </div>
+        <div class="name">
+    <a href="#"><h1>AutoGadgets</h1></a>
+        </div>
+   
+    <div class="account">
+        <button mat-button [matMenuTriggerFor]="belowMenu">Login/Signup</button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+          <button mat-menu-item>Signup</button>
+          <button mat-menu-item (click)="onCreate()">Login</button>
+        </mat-menu>
+    </div>
+    <div class="notification">
+        <button mat-raised-button color="primary"
+        matBadge="8" matBadgePosition="after" matBadgeColor="accent"><mat-icon>home</mat-icon></button>
+        
+    </div>
+    <div class="Cart">
+    <a href="#">My Cart<mat-icon>add_shopping_cart</mat-icon></a>
+    </div>
+    <div class ="admin">
+    <a href="#"><mat-icon>input</mat-icon></a>
+  </div>
+  </mat-toolbar>
+<!-- progress bar -->
+
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<div class="category">
+    <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Top Selling"><app-topselling style="height: 100%;"></app-topselling></mat-tab>
+        <mat-tab label="Category"><div class="category">
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab label="Visor"></mat-tab>
+                <mat-tab label="Exhaust"><app-category></app-category></mat-tab>
+                <mat-tab label="SeatCovers">Content 3</mat-tab>
+                <mat-tab label="HeadLamp"><app-search></app-search></mat-tab>
+              </mat-tab-group>
+        </div>
+    </mat-tab>
+        <mat-tab label="New Releases">Content 3</mat-tab>
+        <mat-tab label="Search"><app-search></app-search></mat-tab>
+      </mat-tab-group>
+</div>
+</mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+</div>
+<!-- Admin Login -->
+
+
+<!-- <div>
+
+    <mat-sidenav-container>
+        <mat-sidenav opened>
+        <mat-nav-list>
+            <a mat-list-item>Account Settings</a>
+            <a mat-list-item>Your Cart</a>
+            <a mat-list-item>Return And Policy</a>
+            <a mat-list-item>Customer support</a>
+            <a mat-list-item>Contact us</a>
+            <a mat-list-item>Sign-out</a>
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+    </mat-sidenav-content>
+    </mat-sidenav-container>
+    </mat-drawer>
+</div> -->
